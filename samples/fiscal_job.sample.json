@@ -1,0 +1,17 @@
+{
+  "job_id": "FJ-004210",
+  "job_key": "JOB-DOC-ALPHA-00042",
+  "correlation_id": "COR-BATCH-ALPHA-20260830",
+  "status": "pending",
+  "required_worker_category": "configured",
+  "attempts": 0,
+  "max_attempts": 3,
+  "document": {
+    "reference": "DOC-ALPHA-0042",
+    "issue_date": "2026-08-15",
+    "amount": 980.5,
+    "currency": "BRL",
+    "jurisdiction_code": "REG-ALPHA01",
+    "service_category": "synthetic-service"
+  }
+}

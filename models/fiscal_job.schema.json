@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/schemas/fiscal-job.schema.json",
+  "title": "Fiscal processing job",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "job_id",
+    "job_key",
+    "correlation_id",
+    "status",
+    "required_worker_category",
+    "attempts",
+    "max_attempts",
+    "document"
+  ],
+  "properties": {
+    "job_id": {
+      "type": "string",
+      "pattern": "^FJ-[0-9]{4,}$"
+    },
+    "job_key": {
+      "type": "string",
+      "pattern": "^JOB-[A-Z0-9-]{8,80}$"
+    },
+    "correlation_id": {
+      "type": "string",
+      "pattern": "^COR-[A-Z0-9-]{8,80}$"
+    },
+    "status": {
+      "enum": ["pending", "claimed", "running", "retry_pending", "succeeded", "failed", "cancelled"]
+    },
+    "required_worker_category": {
+      "enum": ["standard", "configured", "specialized"]
+    },
+    "attempts": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "max_attempts": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 10
+    },
+    "lock_expires_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "document": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["reference", "issue_date", "amount", "currency", "jurisdiction_code"],
+      "properties": {
+        "reference": { "type": "string", "pattern": "^DOC-[A-Z0-9-]{5,40}$" },
+        "issue_date": { "type": "string", "format": "date" },
+        "amount": { "type": "number", "exclusiveMinimum": 0 },
+        "currency": { "type": "string", "pattern": "^[A-Z]{3}$" },
+        "jurisdiction_code": { "type": "string", "pattern": "^REG-[A-Z0-9]{3,12}$" },
+        "service_category": { "type": "string", "maxLength": 80 }
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["storage_reference"],
+      "properties": {
+        "storage_reference": { "type": "string", "pattern": "^protected://[a-z0-9/_-]{6,160}$" },
+        "content_type": { "type": "string", "pattern": "^[a-z]+/[a-z0-9.+-]+$" }
+      }
+    }
+  }
+}
