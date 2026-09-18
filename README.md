@@ -1,6 +1,6 @@
 # Orquestração de Processamento Fiscal
 
-Case público **em evolução** para processar documentos fiscais por uma fila rastreável, combinando aplicativo operacional, orquestração em nuvem e workers RPA.
+Reconstrução pública de um projeto **entregue**: processamento de documentos fiscais por uma fila rastreável, combinando aplicativo operacional, orquestração em nuvem e workers RPA.
 
 > Este repositório é uma reconstrução segura para portfólio. Diagramas, contratos, nomes e dados foram recriados de forma genérica. Ele não contém aplicativo, automações, robôs, planilhas, portais, credenciais, parâmetros, evidências ou configurações de qualquer implementação corporativa.
 
@@ -35,7 +35,7 @@ Consulte a [arquitetura detalhada](docs/architecture.md), o [contrato da fila](m
 
 ## Status e limites
 
-- **Status:** Em evolução.
+- **Status:** Entregue (projeto corporativo em operação); este repositório é a reconstrução pública, sem ativos reais.
 - **Evidências públicas:** documentação reescrita, diagrama, modelo de job, dados sintéticos e testes de contrato.
 - **Não alegado:** execução em produção, volume, tempo de processamento, conexão ativa, disponibilidade de robôs ou integração com terceiros.
 

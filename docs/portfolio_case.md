@@ -2,7 +2,7 @@
 
 ## Contexto
 
-Arquitetura em evolução para processar documentos fiscais por meio de uma fila rastreável, com importação, distribuição de trabalho, execução RPA e acompanhamento operacional.
+Arquitetura, entregue e em operação no projeto de origem, para processar documentos fiscais por meio de uma fila rastreável, com importação, distribuição de trabalho, execução RPA e acompanhamento operacional.
 
 ## Responsabilidade representada
 
@@ -22,4 +22,4 @@ O fluxo separa a importação de um lote do processamento assíncrono. O orquest
 
 ## Limitação explícita
 
-O case não publica aplicativo, fluxos, robôs, credenciais, portais, arquivos ou resultados de uma operação real. Portanto, permanece classificado como **Em evolução**.
+O case não publica aplicativo, fluxos, robôs, credenciais, portais, arquivos ou resultados de uma operação real. O projeto de origem está **entregue e em operação**; o que este repositório oferece é a reconstrução pública do padrão — volume, tempo de ciclo e quantidade de portais não são divulgados.
