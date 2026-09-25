@@ -2,15 +2,15 @@
 
 ## Contexto
 
-Arquitetura, entregue e em operação no projeto de origem, para processar documentos fiscais por meio de uma fila rastreável, com importação, distribuição de trabalho, execução RPA e acompanhamento operacional.
+Orquestração fiscal com aplicativo Power Apps, fila no Dataverse, orquestrador em nuvem e robô RPA. O projeto de origem está **em produção**, numa versão simplificada: um lote por disparo, selecionado por três status, um robô desacompanhado no portal nacional de NFS-e e deduplicação por chave alternativa por nota.
 
-## Responsabilidade representada
+## Papel
 
-Recriação pública da arquitetura, do contrato de fila e das regras de idempotência, retentativa e observabilidade para demonstrar o padrão técnico sem divulgar ativos internos.
+Com meu time, fiz a importação, o aplicativo, o modelo de dados no Dataverse e o contrato de status com o robô. O orquestrador e o robô são de outra equipe (time de automação).
 
-## Solução
+## O que este repositório é
 
-O fluxo separa a importação de um lote do processamento assíncrono. O orquestrador seleciona jobs pendentes, reserva cada job para um worker compatível e consolida o retorno em uma fila monitorável.
+A arquitetura-alvo da próxima evolução, reconstruído sem dado de cliente: fila de trabalhos com reserva com prazo, workers por categoria de portal, evidências protegidas e retorno automático à fila de reserva vencida. O contrato da fila, a amostra e os cenários de teste descrevem esse alvo, não a versão em produção.
 
 ## Evidências verificáveis
 
@@ -22,4 +22,4 @@ O fluxo separa a importação de um lote do processamento assíncrono. O orquest
 
 ## Limitação explícita
 
-O case não publica aplicativo, fluxos, robôs, credenciais, portais, arquivos ou resultados de uma operação real. O projeto de origem está **entregue e em operação**; o que este repositório oferece é a reconstrução pública do padrão — volume, tempo de ciclo e quantidade de portais não são divulgados.
+O case não publica aplicativo, fluxos, robôs, credenciais, portais, arquivos ou resultados de uma operação real. Volume e tempo de ciclo não são divulgados.

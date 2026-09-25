@@ -1,5 +1,7 @@
 # Arquitetura de referência
 
+> Este documento descreve a **arquitetura-alvo** (próxima evolução). O projeto em produção usa uma versão simplificada: um lote por vez selecionado por três status, um robô Power Automate Desktop desacompanhado e deduplicação por chave alternativa por nota, sem reserva com prazo, workers por categoria nem repositório de evidências. Ver a comparação no [README](../README.md#arquitetura-alvo-próxima-evolução).
+
 ## Objetivo
 
 Organizar o processamento assíncrono de documentos fiscais sem acoplar a interface de operação aos portais externos. A arquitetura mantém o trabalho rastreável, permite distribuição por capacidade e evita a criação duplicada de jobs.
